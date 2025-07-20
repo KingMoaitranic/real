@@ -1,86 +1,64 @@
-<form>
-  <input id="start" type="radio" name="start" required="required"/>
-  <label id="label-start" for="start">START</label>
-  <input id="stand" type="radio"/>
-  <label id="label-stand" for="stand">STAND</label>
-  <input id="hit-e" type="radio"/>
-  <label class="label-hit" for="hit-e">HIT</label>
-  <input id="hit-d" type="radio"/>
-  <label class="label-hit" for="hit-d">HIT</label>
-  <input id="hit-c" type="radio"/>
-  <label class="label-hit" for="hit-c">HIT</label>
-  <div id="stage_container">
-    <div class="stage">
-      <div class="stage__body stage__body--dealer">
-        <div class="stage__labels stage__labels--dealer">
-          <h2 class="stage__labels--main">DEALER'S HAND</h2>
-          <div class="stage__labels--total dealer-total"><span class="sm">DEALER'S</span> TOTAL</div>
-        </div>
-        <div class="cards">
-          <div class="card--da card--a card">
-            <div class="card__face"></div>
-          </div>
-          <div class="card--db card--b card"> 
-            <div class="card__face"></div>
-          </div>
-          <div class="card--dc card--c card"> 
-            <div class="card__face"></div>
-          </div>
-          <div class="card--dd card--d card"> 
-            <div class="card__face"></div>
-          </div>
-          <div class="card--de card--e card">
-            <div class="card__face"></div>
-          </div>
-        </div>
-      </div>
-      <div class="stage__body stage__body--player">
-        <div class="stage__labels stage__labels--player">
-          <h2 class="stage__labels--main">YOUR HAND</h2>
-          <div class="stage__labels--total user-total"><span class="sm">YOUR</span> TOTAL</div>
-        </div>
-        <div class="cards">
-          <div class="card--ua card--a card">
-            <div class="card__face"></div>
-          </div>
-          <div class="card--ub card--b card"> 
-            <div class="card__face"></div>
-          </div>
-          <div class="card--uc card--c card"> 
-            <div class="card__face"></div>
-          </div>
-          <div class="card--ud card--d card"> 
-            <div class="card__face"></div>
-          </div>
-          <div class="card--ue card--e card">
-            <div class="card__face"></div>
-          </div>
-        </div>
-      </div>
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" href="blackjackstyle.css">
+    <meta charset="utf-8" />
+</head>
+<body>
+    <div class="textupdates" id="textUpdates">
+        Press 'New Game' to begin!
+
+
+    </div> 
+
+    <div class="buttonbox" id="newgame">
+        <button alt="play" id="play">New Game</button>
     </div>
-    <div class="message" id="player_bust">
-      <div class="message__interior"> 
-        <p class="message__label">You bust</p>
-      </div>
+    <div class="buttonbox hidden" id="buttonBox">
+        <button alt="hit" id="hit">Hit</button>
+        <button alt="stay" id="stay">Stay</button>
     </div>
-    <div class="message" id="dealer_bust">
-      <div class="message__interior"> 
-        <p class="message__label">Dealer busts</p>
-      </div>
+    <table>
+        <tr>
+            <th id="phand">             
+                Your Hand
+            </th>
+            <th id="dhand">
+                Dealer's Hand
+            </th>
+        </tr>
+        <tr>
+            <td id="pcards">No cards dealt yet</td>
+            <td id="dcards">No cards dealt yet</td>
+
+        </tr> 
+    </table>
+    <div id="tracker" class="buttonbox">
+        <p>Wins: 0 Draws: 0 Losses: 0</p>
     </div>
-    <div class="message" id="game_result">
-      <div class="message__interior"> 
-        <p class="message__label">You Win</p>
-      </div>
-      <div class="message__interior"> 
-        <p class="message__label">Push</p>
-      </div>
-      <div class="message__interior"> 
-        <p class="message__label">Dealer Wins</p>
-      </div>
+    <div class="buttonbox">
+        <!--<br />
+        <br />
+        <img src="img/stratchart.png" />-->
     </div>
-  </div>
-</form>
-<div id="warning"> 
-  <p>Please visit this page in a <a href="https://caniuse.com/?search=%40property">browser that supports the @property rule</a>.</p>
-</div>
+
+
+
+<script src="blackjack.js"></script>
+</body>
+
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
