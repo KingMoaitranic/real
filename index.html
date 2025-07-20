@@ -1,65 +1,86 @@
-form
-  input#start(type="radio", name="start", required)
-  label#label-start(for="start") START
-
-  input#stand(type="radio")
-  label#label-stand(for="stand") STAND
-
-  input#hit-e(type="radio")
-  label.label-hit(for="hit-e") HIT
-
-  input#hit-d(type="radio")
-  label.label-hit(for="hit-d") HIT
-
-  input#hit-c(type="radio")
-  label.label-hit(for="hit-c") HIT
-
-  #stage_container
-    .stage
-      .stage__body.stage__body--dealer
-        .stage__labels.stage__labels--dealer
-          h2.stage__labels--main DEALER'S HAND
-          .stage__labels--total.dealer-total <span class="sm">DEALER'S</span> TOTAL
-        .cards
-          .card--da.card--a.card
-            .card__face
-          .card--db.card--b.card 
-            .card__face
-          .card--dc.card--c.card 
-            .card__face
-          .card--dd.card--d.card 
-            .card__face
-          .card--de.card--e.card
-            .card__face
-      .stage__body.stage__body--player
-        .stage__labels.stage__labels--player
-          h2.stage__labels--main YOUR HAND
-          .stage__labels--total.user-total <span class="sm">YOUR</span> TOTAL
-        .cards
-          .card--ua.card--a.card
-            .card__face
-          .card--ub.card--b.card 
-            .card__face
-          .card--uc.card--c.card 
-            .card__face
-          .card--ud.card--d.card 
-            .card__face
-          .card--ue.card--e.card
-            .card__face
-
-    #player_bust.message
-      .message__interior 
-        p.message__label You bust
-    #dealer_bust.message
-      .message__interior 
-        p.message__label Dealer busts
-    #game_result.message
-      .message__interior 
-        p.message__label You Win
-      .message__interior 
-        p.message__label Push
-      .message__interior 
-        p.message__label Dealer Wins
-
-#warning 
-  p Please visit this page in a <a href="https://caniuse.com/?search=%40property">browser that supports the @property rule</a>.
+<form>
+  <input id="start" type="radio" name="start" required="required"/>
+  <label id="label-start" for="start">START</label>
+  <input id="stand" type="radio"/>
+  <label id="label-stand" for="stand">STAND</label>
+  <input id="hit-e" type="radio"/>
+  <label class="label-hit" for="hit-e">HIT</label>
+  <input id="hit-d" type="radio"/>
+  <label class="label-hit" for="hit-d">HIT</label>
+  <input id="hit-c" type="radio"/>
+  <label class="label-hit" for="hit-c">HIT</label>
+  <div id="stage_container">
+    <div class="stage">
+      <div class="stage__body stage__body--dealer">
+        <div class="stage__labels stage__labels--dealer">
+          <h2 class="stage__labels--main">DEALER'S HAND</h2>
+          <div class="stage__labels--total dealer-total"><span class="sm">DEALER'S</span> TOTAL</div>
+        </div>
+        <div class="cards">
+          <div class="card--da card--a card">
+            <div class="card__face"></div>
+          </div>
+          <div class="card--db card--b card"> 
+            <div class="card__face"></div>
+          </div>
+          <div class="card--dc card--c card"> 
+            <div class="card__face"></div>
+          </div>
+          <div class="card--dd card--d card"> 
+            <div class="card__face"></div>
+          </div>
+          <div class="card--de card--e card">
+            <div class="card__face"></div>
+          </div>
+        </div>
+      </div>
+      <div class="stage__body stage__body--player">
+        <div class="stage__labels stage__labels--player">
+          <h2 class="stage__labels--main">YOUR HAND</h2>
+          <div class="stage__labels--total user-total"><span class="sm">YOUR</span> TOTAL</div>
+        </div>
+        <div class="cards">
+          <div class="card--ua card--a card">
+            <div class="card__face"></div>
+          </div>
+          <div class="card--ub card--b card"> 
+            <div class="card__face"></div>
+          </div>
+          <div class="card--uc card--c card"> 
+            <div class="card__face"></div>
+          </div>
+          <div class="card--ud card--d card"> 
+            <div class="card__face"></div>
+          </div>
+          <div class="card--ue card--e card">
+            <div class="card__face"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="message" id="player_bust">
+      <div class="message__interior"> 
+        <p class="message__label">You bust</p>
+      </div>
+    </div>
+    <div class="message" id="dealer_bust">
+      <div class="message__interior"> 
+        <p class="message__label">Dealer busts</p>
+      </div>
+    </div>
+    <div class="message" id="game_result">
+      <div class="message__interior"> 
+        <p class="message__label">You Win</p>
+      </div>
+      <div class="message__interior"> 
+        <p class="message__label">Push</p>
+      </div>
+      <div class="message__interior"> 
+        <p class="message__label">Dealer Wins</p>
+      </div>
+    </div>
+  </div>
+</form>
+<div id="warning"> 
+  <p>Please visit this page in a <a href="https://caniuse.com/?search=%40property">browser that supports the @property rule</a>.</p>
+</div>
